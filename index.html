@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografi Tan Malaka - Bapak Republik yang Terlupakan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-dark: #0f172a;       
+            --bg-light: #fcfbf7;      
+            --text-dark: #1e293b;     
+            --text-muted: #475569;    
+            --primary: #b45309;       
+            --primary-light: #fef3c7; 
+            --card-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: var(--bg-dark);
+            color: #f3f0df;
+            padding: 40px 24px 30px 24px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+            position: relative;
+        }
+
+        header .badge {
+            display: inline-block;
+            background-color: rgba(180, 83, 9, 0.2);
+            color: #fbbf24;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            border: 1px solid rgba(180, 83, 9, 0.3);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        header p.subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 300;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .progress-container {
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            width: 100%;
+            height: 4px;
+            background: #e2e8f0;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: var(--primary);
+            width: 0%;
+        }
+
+        .content {
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .quote-box {
+            margin: 20px 0 35px 0;
+            padding: 24px;
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            position: relative;
+        }
+
+        .quote-box blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #78350f;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .quote-box cite {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: normal;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--bg-dark);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(15, 23, 42, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        p.narrative {
+            font-size: 15px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        p.narrative strong {
+            color: #000;
+        }
+
+        .image-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 8px;
+            padding: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .image-card .caption {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .timeline-item {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .timeline-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .styled-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .styled-list li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 16px;
+            font-size: 14.5px;
+        }
+
+        .styled-list li strong {
+            display: block;
+            font-size: 15px;
+            color: var(--bg-dark);
+            margin-bottom: 2px;
+        }
+
+        .styled-list li i {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: #cbd5e1;
+            padding: 40px 24px;
+            text-align: center;
+            margin-top: auto;
+            border-top: 4px solid var(--primary);
+        }
+
+        footer h3 {
+            font-family: 'Playfair Display', serif;
+            color: #f3f0df;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            font-size: 13.5px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 15px auto;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+
+        <header>
+            <div class="badge">Biografi Pahlawan Nasional</div>
+            <h1>Tan Malaka</h1>
+            <p class="subtitle">Kisah Bapak Republik yang Terlupakan</p>
+        </header>
+
+        <div class="content">
+            
+            <div class="quote-box">
+                <blockquote>"Ingatlah! Bahwa dari dalam kubur, suara saya akan terdengar lebih keras daripada dari atas bumi."</blockquote>
+                <cite>— Tan Malaka, 1949</cite>
+            </div>
+
+            <section>
+                <h2 class="section-title"><i class="fa-solid fa-baby"></i> Kelahiran &amp; Masa Kecil</h2>
+                <p class="narrative">
+                    Ia terlahir dengan nama asli <strong>Ibrahim</strong> sekitar tahun 1897 di Nagari Pandan Gadang, Suliki, Sumatera Barat. Tumbuh dalam dekapan alam Sumatra yang asri, ia dibesarkan di tengah keluarga yang taat beragama dan menjunjung tinggi adat Minangkabau yang demokratis.
+                </p>
+                
+                <div class="image-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/TanMalaka_DariPendjara_ed3.jpg/250px-TanMalaka_DariPendjara_ed3.jpg" alt="Foto Tan Malaka">
+                    <div class="caption">Potret ikonik Ibrahim (Tan Malaka) saat berusia muda.</div>
+                </div>
+
+                <p class="narrative">
+                    Sebelum meninggalkan tanah kelahirannya untuk merantau, Ibrahim dianugerahi gelar adat kehormatan tertinggi di sukunya, yaitu <strong>Datuk Sutan Malaka</strong>. Gelar kebesaran inilah yang kemudian melekat padanya sebagai nama perjuangan yang menggetarkan dunia: <strong>Tan Malaka</strong>.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Pendidikan &amp; Karir</h2>
+                <p class="narrative">
+                    Kecerdasan Ibrahim yang luar biasa menarik perhatian guru-gurunya di Kweekschool (sekolah guru) Bukittinggi. Hal ini mengantarkannya melintasi samudra menuju Belanda pada tahun 1913 untuk belajar di <strong>Rijks Kweekschool, Haarlem</strong>.
+                </p>
+
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <h4>1913 - Eropa &amp; Cakrawala Baru</h4>
+                        <p>Di Belanda, ia tidak hanya belajar ilmu mengajar, melainkan juga melahap buku-buku filsafat dan sosiologi politik. Kesadaran akan ketertindasan bangsanya mulai mengakar kuat di sini.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>1921 - Sekolah Sarekat Islam</h4>
+                        <p>Sekembalinya ke tanah air, ia menolak kemapanan. Ia memilih pergi ke Semarang untuk mendirikan sekolah khusus anak-anak buruh kecil, memberikan mereka akses ilmu pengetahuan gratis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> Kisah Kepahlawanan</h2>
+                <p class="narrative">
+                    Karena aktivitas politiknya yang menentang penjajah Belanda, Tan Malaka diasingkan pada tahun 1922. Selama lebih dari 20 tahun, ia menjalani kehidupan penuh bahaya dalam pelarian internasional di Filipina, Tiongkok, Singapura, hingga Rusia dengan puluhan nama samaran untuk menghindari polisi rahasia imperialis.
+                </p>
+
+                <ul class="styled-list">
+                    <li>
+                        <i class="fa-solid fa-book"></i>
+                        <strong>Buku "Naar de Republiek Indonesia" (1925)</strong>
+                        Ia menulis konsep negara Republik Indonesia pertama kali dalam sejarah, mendahului gagasan tokoh-tokoh bangsa lainnya.
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mask"></i>
+                        <strong>Menyamar Menjadi Juru Tulis Romusha</strong>
+                        Saat Jepang berkuasa, ia menyusup ke Bayah, Banten dengan nama "Ilyas Husein" guna membantu meredam penderitaan para pekerja paksa (romusha).
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-flag"></i>
+                        <strong>Semboyan "Merdeka 100%"</strong>
+                        Ia menentang diplomasi damai yang berkompromi dengan Belanda. Baginya, kedaulatan penuh adalah harga mati yang tidak bisa ditawar.
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <footer>
+            <h3>Gugurnya Sang Patriot</h3>
+            <div class="divider"></div>
+            <p>
+                Tragisnya, perjalanan sang penggagas republik harus berakhir di ujung senapan bangsanya sendiri. Pada 21 Februari 1949, di tengah kekacauan revolusi fisik, Tan Malaka dieksekusi mati tanpa pengadilan di Selopanggung, Kediri. 
+            </p>
+            <p>
+                Meskipun raganya dikubur di tengah belantara sunyi, pemikirannya tetap abadi. Pada tahun 1963, Presiden Soekarno secara resmi menetapkan Tan Malaka sebagai <strong>Pahlawan Nasional Indonesia</strong>.
+            </p>
+            <div class="divider"></div>
+        </footer>
+    </div>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>
